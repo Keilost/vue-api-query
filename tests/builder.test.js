@@ -121,7 +121,7 @@ describe('Query builder', () => {
   test('whereIn() sets properly the builder', () => {
     let post = Post.whereIn('status', ['ACTIVE', 'ARCHIVED'])
 
-    expect(post._builder.filters).toEqual({ status: 'ACTIVE,ARCHIVED' })
+    expect(post._builder.filters).toEqual({ status: 'ACTIVE|ARCHIVED' })
   })
 
   test('whereIn() throws a exception when second parameter is not a array', () => {

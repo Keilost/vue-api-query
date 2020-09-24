@@ -78,7 +78,7 @@ export default class Builder {
     if (!Array.isArray(array))
       throw new Error('The second argument on whereIn() method must be an array.')
 
-    this.filters[key] = array.join(',')
+    this.filters[key] = array.join('|')
 
     return this
   }
